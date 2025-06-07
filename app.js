@@ -22,7 +22,3 @@ console.log(getComputerChoice());
 console.log(getHumanChoice());
 
 // End getComputerChoice function
-
-
-
-console.log("Hello, World!");
