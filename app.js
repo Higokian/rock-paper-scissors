@@ -23,24 +23,23 @@ function playRound(humanChoice, computerChoice) {
   // Convert humanChoice to all lowercase
   console.log(humanChoice.toLowerCase());
 
-  // if humanChoice === "rock" && computerChoice === "paper"
-    // Display you lose
-
-  // else if humanChoice === "paper" && computerChoice === " scissors"
-    // Display you lose
-
-  // else if humanChoice === "scissors" && computerChoice === "rock"
-   // Display you lose
-
-  // else if humanChoice === computerChoice
-    // Display you tie
-  
-  // else
-   // Display you win
+  // Determine the winner!
+  if (humanChoice === "rock" && computerChoice === "paper") {
+    console.log("You lose! Paper beats rock");
+  } else if (humanChoice === "paper" && computerChoice === "scissors") {
+    console.log("You lose! Scissors beats paper.");
+  } else if (humanChoice === "Scissors" && computerChoice === "rock") {
+    console.log("You lose! Rock beats scissors.");
+  } else if (humanChoice === computerChoice) {
+    console.log("You tie!");
+  } else {
+    console.log("You win!");
+  }
 }
 
 const computerChoice = getComputerChoice();
 const humanChoice = getHumanChoice();
+console.log(computerChoice);
   
 playRound(humanChoice, computerChoice);
 
