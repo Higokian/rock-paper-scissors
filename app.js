@@ -1,4 +1,4 @@
-let humanScore, computerScore = 0;
+let humanScore = 0, computerScore = 0;
 
 function getComputerChoice() {
       // Get random number (separate function?)
@@ -26,14 +26,18 @@ function playRound(humanChoice, computerChoice) {
   // Determine the winner!
   if (humanChoice === "rock" && computerChoice === "paper") {
     console.log("You lose! Paper beats rock");
+    computerScore++;
   } else if (humanChoice === "paper" && computerChoice === "scissors") {
     console.log("You lose! Scissors beats paper.");
+    computerScore++;
   } else if (humanChoice === "Scissors" && computerChoice === "rock") {
     console.log("You lose! Rock beats scissors.");
+    computerScore++;
   } else if (humanChoice === computerChoice) {
     console.log("You tie!");
   } else {
     console.log("You win!");
+    humanScore++;
   }
 }
 
@@ -42,5 +46,7 @@ const humanChoice = getHumanChoice();
 console.log(computerChoice);
   
 playRound(humanChoice, computerChoice);
+console.log(`Human Score: ${humanScore}`)
+console.log(`Computer Score: ${computerScore}`)
 
 // End getComputerChoice function
