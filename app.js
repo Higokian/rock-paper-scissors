@@ -1,7 +1,7 @@
 let humanScore = 0, computerScore = 0;
 
 function getComputerChoice() {
-      // Get random number (separate function?)
+
     const randNum = Math.floor(Math.random() * 3) + 1
 
     if (randNum === 1) {
@@ -19,9 +19,14 @@ function getHumanChoice() {
   return humanChoice;
 }
 
+// Could be less complex, but this was an attempt to
+// solve the problem without using an array
 function playRound(humanChoice, computerChoice) {
-  // Convert humanChoice to all lowercase
-  console.log(humanChoice.toLowerCase());
+
+
+  // Make sure humanChoice and computerChoice have matching letter casing
+  console.log(`You choose: ${humanChoice.toLowerCase()}`);
+  console.log(`Computer chose: ${computerChoice}`);
 
   // Determine the winner!
   if (humanChoice === "rock" && computerChoice === "paper") {
@@ -41,11 +46,21 @@ function playRound(humanChoice, computerChoice) {
   }
 }
 
-const computerChoice = getComputerChoice();
-const humanChoice = getHumanChoice();
-console.log(computerChoice);
+function playGame() {
+  let i = 1;
+  while (i < 6) {
+    playRound(getHumanChoice(), getComputerChoice());
+    console.log(`Human Score: ${humanScore}`)
+    console.log(`Computer Score: ${computerScore}`)
+    i++
+  }
   
-playRound(humanChoice, computerChoice);
-console.log(`Human Score: ${humanScore}`)
-console.log(`Computer Score: ${computerScore}`)
+}
+
+
+
+playGame();
+  
+
+
 
