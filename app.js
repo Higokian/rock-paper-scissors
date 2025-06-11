@@ -49,7 +49,7 @@ function playGame() {
   let i = 1;
   while (i < 6) {
     console.log("------------------------");
-    console.log(`GAME ${i}`);
+    console.log(`ROUND ${i}`);
     console.log("------------------------");
 
     playRound(getHumanChoice(), getComputerChoice());
