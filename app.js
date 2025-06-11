@@ -14,7 +14,6 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-  // Prompt user for choice and store choice
   let humanChoice = prompt("Please enter your choice");
   return humanChoice;
 }
@@ -49,10 +48,14 @@ function playRound(humanChoice, computerChoice) {
 function playGame() {
   let i = 1;
   while (i < 6) {
+    console.log("------------------------");
+    console.log(`GAME ${i}`);
+    console.log("------------------------");
+
     playRound(getHumanChoice(), getComputerChoice());
-    console.log(`Human Score: ${humanScore}`)
-    console.log(`Computer Score: ${computerScore}`)
-    i++
+    console.log(`Human Score: ${humanScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+    i++;
   }
   
 }
